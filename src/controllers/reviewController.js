@@ -22,6 +22,7 @@ exports.createReview = async (req, res, next) => {
 };
 
 exports.updateReview = async (req, res, next) => {
+
   try {
     const review = await Review.findOne({ _id: req.params.id, userId: req.user._id });
     if (!review) return res.status(404).json({ message: 'Review not found' });
