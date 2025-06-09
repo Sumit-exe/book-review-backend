@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/books', bookRoutes);
-app.use('/api/books', reviewRoutes);
+app.use('/api/review', reviewRoutes);
 
 // app.use(errorHandler);
 module.exports = app;
